@@ -65,7 +65,7 @@ from sklearn.svm import SVR
 from sklearn.metrics import mean_absolute_error, r2_score
 
 # 1. นิยามโมเดลย่อย 3 ประเภท
-model1 = RandomForestRegressor(n_estimators=100, random_state=42) # แบบ Tree
+model1 = RandomForestRegressor(n_estimators=80, random_state=42) # แบบ Tree
 model2 = LinearRegression()                                      # แบบ Linear
 model3 = SVR(kernel='rbf')                                       # แบบ Kernel
 
@@ -88,7 +88,7 @@ print(f"R-squared Score: {r2_score(y_test, y_pred):.2f}")
 
 import joblib
 
-joblib.dump(ensemble_model, 'ensemble_model.pkl')
+joblib.dump(ensemble_model, 'ensemble_model.pkl', compress=3)
 joblib.dump(scaler, 'scaler.pkl')
 
 model_columns = X.columns.tolist()

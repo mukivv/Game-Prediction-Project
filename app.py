@@ -162,7 +162,7 @@ if page == "ᯓ★ ML Description":
     with col1:
         st.markdown("#### 🌲 Random Forest")
         st.caption("The Tree Expert")
-        st.write("ใช้ Decision Trees หลายต้นเพื่อ**ลด Overfitting** โดยกำหนด `n_estimators=100` หมายถึงการสร้างต้นไม้ 100 ต้น แต่ละต้นจะสุ่มเลือกข้อมูลและ Features มาเรียนรู้แยกกัน จากนั้นจะนำผลพยากรณ์คะแนนจากต้นไม้ทั้ง 100 ต้นมาเฉลี่ยกัน")
+        st.write("ใช้ Decision Trees หลายต้นเพื่อ**ลด Overfitting** โดยกำหนด `n_estimators=80` หมายถึงการสร้างต้นไม้ 80 ต้น แต่ละต้นจะสุ่มเลือกข้อมูลและ Features มาเรียนรู้แยกกัน จากนั้นจะนำผลพยากรณ์คะแนนจากต้นไม้ทั้ง 80 ต้นมาเฉลี่ยกัน")
 
     with col2:
         st.markdown("#### 📈 Linear Regression")
@@ -184,7 +184,7 @@ if page == "ᯓ★ ML Description":
         st.write("โมเดลทั้ง 3 ประเภทถูกเลือกให้มีความหลากหลายของอัลกอริทึม (Model Diversity) เพื่อลดข้อผิดพลาดที่อาจเกิดขึ้นตามที่อธิบายไปในทฤษฎีของอัลกอริทึมด้านบน")
         st.code("""
         # 1. Random Forest (Tree-based)
-            model1 = RandomForestRegressor(n_estimators=100, random_state=42)
+            model1 = RandomForestRegressor(n_estimators=80, random_state=42)
         # 2. Linear Regression (Linear-based)
             model2 = LinearRegression()
         # 3. SVR (Kernel-based)
